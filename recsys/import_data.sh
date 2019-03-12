@@ -11,3 +11,6 @@ else
 	echo "devi scaricarti prima predictionIO"
 fi
 
+# build del modello
+pio-docker build --verbose
+
