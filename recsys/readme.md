@@ -20,7 +20,7 @@ chmod 777 avvioAmbiente.sh
 ./avvioAmbiente.sh
 ```
 
-Per analizzare se tutto è funziona correttamente, digitare 
+Per analizzare se tutto funziona correttamente, digitare 
 ```
 $ pio-docker status
 ...
@@ -34,15 +34,20 @@ chmod 777 registraApp.sh
 ./registraApp.sh
 ```
 
-### Import Data
+Per guardare quali sono le applicazioni registrate nel server
 
 ```
-//per guardare le applicazioni registrate
-pio app list
+pio-docker app list
+```
+### Import Data
 
-pio-docker import --appid 1 --input data/my_users.json
-pio-docker import --appid 1 --input data/my_events.json
-pio-docker import --appid 1 --input data/my_events_view.json
+Per importare i dati in batch:
+
+```
+// Attenzione: modificare opportunamente <APP_ID> in
+// pio-docker import --appid <APP_ID> --input data/my_users.json
+chmod 777 import_data.sh
+./import_data.sh
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
