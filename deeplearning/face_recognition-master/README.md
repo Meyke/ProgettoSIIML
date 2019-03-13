@@ -1,31 +1,37 @@
 # Recognize Images From Video
 
-## PREPARAZIONE AMBIENTE
+### Installazione e avvio dell'ambiente
 
-- Installare i requisiti tramite il comando pip install -r requirements.txt
+Il seguente script avvia un contenitore in cui è installato un notebook per sviluppare ed eseguire eventuali test. Per avviare il contenitore eseguire lo script:
 
-## DEMO
+```
+chmod 777 creazioneAmbiente.sh 
+./creazioneAmbiente.sh
+```
 
-- Il file face_recognizer.ipynb fa face detection in un video che viene passato come parametro, e restituisce un json con gli attori riconosciuti nel video.
+E' possibile accedere al notebook o tramite il link che viene indicato dal terminale, oppure direttamente nel proprio browser preferito immettere:
+
+```
+http://127.0.0.1:8888/tree
+```
+
+### comandi utili 
+
+Per stoppare (attenzione, non rimuovere) il contenitore con nome *face_rec_cont*:
+
+```
+docker stop face_rec_cont
+```
+Per avviare il contenitore in modo interattivo:
+
+```
+docker start -i face_rec_cont
+```
+
+**ATTENZIONE**: se eliminiamo un contenitore, viene eliminato anche il suo contenuto. Questo può essere evitato montando un VOLUME linkato con qualche cartella del proprio host. Si guardi la documentazione di docker.
 
 ## ALTRO
 
 - Il file face_encoding.ipynb contiene il codice che è stato per l'addestramento(da non utilizzare)
 - I file file.csv e dict_file.csv contengono gli embedding che sono stati addestrati dal dataset di 217 attori e una mappa utilizzata per l'etichettatura delle facce.
 - Il file list.csv contiente la lista degli attori contenuti nel dataset
-
-## CITATION
-If you use this code for your publications, please cite it as:
-
-    @ONLINE{frc,
-        author = "Ahmet Özlü",
-        title  = "Face Database Creator",
-        year   = "2017",
-        url    = "https://github.com/ahmetozlu/face_recognition_crop"
-    }
-
-## AUTHOR
-Ahmet Özlü
-
-## LICENSE
-This system is available under the MIT license. See the LICENSE file for more info.
