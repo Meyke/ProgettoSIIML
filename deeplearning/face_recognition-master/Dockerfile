@@ -42,12 +42,13 @@ COPY . /root/face_recognition
 RUN cd /root/face_recognition && \
     pip3 install -r requirements.txt
 
+#Jupyter notebook ascolta nella porta 8888
 EXPOSE 8888
 EXPOSE 8000
 
 #CMD cd /root/face_recognition/examples && \
 #    python3 recognize_faces_in_pictures.py
-ENTRYPOINT ["/bin/bash"]
+CMD ["sh", "-c", "jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"]
 
 
 
