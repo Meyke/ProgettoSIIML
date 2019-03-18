@@ -6,3 +6,5 @@ youtube_dl
 pandas
 Pillow
 jupyter
+nltk
+git+https://github.com/abenassi/Google-Search-API
