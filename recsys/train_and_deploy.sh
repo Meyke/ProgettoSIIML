@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd predictionio/docker/templates/MyRecommendation
+
 # addestramento senza spark (per pochi dati)
 pio-docker train
 
