@@ -9,3 +9,4 @@ jupyter
 nltk
 git+https://github.com/abenassi/Google-Search-API
 predictionio
+google_images_download
