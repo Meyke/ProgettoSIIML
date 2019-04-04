@@ -3,7 +3,7 @@ import os
 from google_images_download import google_images_download
 
 # nome del file da cui leggere la lista di attori
-file_name = "actors_list.csv"
+file_name = "atleti.csv"
 
 response = google_images_download.googleimagesdownload()
 

@@ -1,6 +1,6 @@
 import os
 
-for dirname, dirnames, filenames in os.walk("downloads"):
+for dirname, dirnames, filenames in os.walk("athletes"):
     for subdirname in dirnames:
         subject_path = os.path.join(dirname, subdirname)
         counter = 1
