@@ -45,12 +45,12 @@ class DataSource(val dsp: DataSourceParams)
       entityType = "item"
     )(sc).map { case (entityId, properties) => // all'RDD ritornato applico subito una transformation map
       val item = try {
-        // Assume categories is optional property of item.
+        // Assume tags is optional property of item.
         Item(
         	title = properties.get[String]("title"),
-        	date = properties.get[String]("date"),
-        	imdbUrl = properties.get[String]("imdbUrl"),
-        	categories = properties.getOpt[List[String]]("categories"))
+        	channelTitle = properties.get[String]("channelTitle"),
+        	url = properties.get[String]("url"),
+        	tags = properties.getOpt[List[String]]("tags"))
       } catch {
         case e: Exception => {
           logger.error(s"Failed to get properties ${properties} of" +
@@ -100,9 +100,9 @@ case class User()
 
 case class Item(
 	title: String,
-	date: String,
-	imdbUrl: String,
-	categories: Option[List[String]])
+	channelTitle: String,
+	url: String,
+	tags: Option[List[String]])
 
 case class ViewEvent(user: String, item: String, t: Long)
 

@@ -156,8 +156,8 @@ class ALSAlgorithm(val ap: ALSAlgorithmParams)
       isCandidateItem(
         i = i,
         items = model.items,
-        categories = query.categories,
-        categoryBlackList = query.categoryBlackList,
+        tags = query.tags,
+        tagBlackList = query.tagBlackList,
         queryList = queryList,
         whiteList = whiteList,
         blackList = blackList
@@ -171,8 +171,8 @@ class ALSAlgorithm(val ap: ALSAlgorithmParams)
       ItemScore(
         item = model.itemIntStringMap(i),
         title = it.title,
-        date = it.date,
-        imdbUrl = it.imdbUrl,
+        channelTitle = it.channelTitle,
+        url = it.url,
         score = s
       )
     }
@@ -221,8 +221,8 @@ class ALSAlgorithm(val ap: ALSAlgorithmParams)
   def isCandidateItem(
     i: Int,
     items: Map[Int, Item],
-    categories: Option[Set[String]],
-    categoryBlackList: Option[Set[String]],
+    tags: Option[Set[String]],
+    tagBlackList: Option[Set[String]],
     queryList: Set[Int],
     whiteList: Option[Set[Int]],
     blackList: Option[Set[Int]]
@@ -231,18 +231,18 @@ class ALSAlgorithm(val ap: ALSAlgorithmParams)
     blackList.map(!_.contains(i)).getOrElse(true) &&
     // discard items in query as well
     (!queryList.contains(i)) &&
-    // filter categories
-    categories.map { cat =>
-      items(i).categories.map { itemCat =>
-        // keep this item if has ovelap categories with the query
+    // filter tags
+    tags.map { cat =>
+      items(i).tags.map { itemCat =>
+        // keep this item if has ovelap tags with the query
         !(itemCat.toSet.intersect(cat).isEmpty)
-      }.getOrElse(false) // discard this item if it has no categories
+      }.getOrElse(false) // discard this item if it has no tags
     }.getOrElse(true) &&
-    categoryBlackList.map { cat =>
-      items(i).categories.map { itemCat =>
-        // discard this item if has ovelap categories with the query
+    tagBlackList.map { cat =>
+      items(i).tags.map { itemCat =>
+        // discard this item if has ovelap tags with the query
         (itemCat.toSet.intersect(cat).isEmpty)
-      }.getOrElse(true) // keep this item if it has no categories
+      }.getOrElse(true) // keep this item if it has no tags
     }.getOrElse(true)
   }
 
