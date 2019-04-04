@@ -114,7 +114,7 @@ class CooccurrenceAlgorithm(val ap: CooccurrenceAlgorithmParams)
         isCandidateItem(
           i = i,
           items = model.items,
-          categories = query.categories,
+          tags = query.tags,
           queryList = queryList,
           whiteList = whiteList,
           blackList = blackList
@@ -141,7 +141,7 @@ class CooccurrenceAlgorithm(val ap: CooccurrenceAlgorithmParams)
   def isCandidateItem(
     i: Int,
     items: Map[Int, Item],
-    categories: Option[Set[String]],
+    tags: Option[Set[String]],
     queryList: Set[Int],
     whiteList: Option[Set[Int]],
     blackList: Option[Set[Int]]
@@ -150,12 +150,12 @@ class CooccurrenceAlgorithm(val ap: CooccurrenceAlgorithmParams)
     blackList.map(!_.contains(i)).getOrElse(true) &&
     // discard items in query as well
     (!queryList.contains(i)) &&
-    // filter categories
-    categories.map { cat =>
-      items(i).categories.map { itemCat =>
-        // keep this item if has ovelap categories with the query
+    // filter tags
+    tags.map { cat =>
+      items(i).tags.map { itemCat =>
+        // keep this item if has ovelap tags with the query
         !(itemCat.toSet.intersect(cat).isEmpty)
-      }.getOrElse(false) // discard this item if it has no categories
+      }.getOrElse(false) // discard this item if it has no tags
     }.getOrElse(true)
   }
 

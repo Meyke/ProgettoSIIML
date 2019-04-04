@@ -6,8 +6,8 @@ import org.apache.predictionio.controller.Engine
 case class Query(
   items: List[String],
   num: Int,
-  categories: Option[Set[String]],
-  categoryBlackList: Option[Set[String]],
+  tags: Option[Set[String]],
+  tagBlackList: Option[Set[String]],
   whiteList: Option[Set[String]],
   blackList: Option[Set[String]]
 )
@@ -21,8 +21,8 @@ case class PredictedResult(
 case class ItemScore(
   item: String,
   title: String,
-  date: String,
-  imdbUrl: String,
+  channelTitle: String,
+  url: String,
   score: Double
 ) extends Serializable
 
