@@ -127,8 +127,8 @@ class CooccurrenceAlgorithm(val ap: CooccurrenceAlgorithmParams)
         ItemScore(
           item = model.itemIntStringMap(index),
           title = it.title,
-          date = it.date,
-          imdbUrl = it.imdbUrl,
+          channelTitle = it.channelTitle,
+          url = it.url,
           score = count
         )
       }
