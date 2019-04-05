@@ -16,6 +16,7 @@
 "['throwing', 'sprinting', 'kicking']",Athletics
 "['running', 'sprinting', 'racing']",Athletics
 "['jumping', 'sprinting', 'competing']",Athletics
+"['sprinting', 'running', 'jumping']",Athletics
 "['diving', 'swimming', 'jumping']",Diving
 "['swimming', 'diving', 'splashing']",Diving
 "['diving', 'swimming', 'splashing']",Diving
