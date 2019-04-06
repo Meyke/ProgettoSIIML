@@ -1,14 +1,13 @@
-lifting,[‘Weightlifting’]
-wrestling,[‘Wrestling’]
-squatting,[‘Weightlifting’]
-hitting,[‘Tennis’]
-serving,[‘Tennis’]
-hugging,[‘Taekwondo’]
-fighting,[‘Taekwondo’]
-standing,[‘Table Tennis’]
-stroking,[‘Swimming’]
-sailing,[‘Sailing’]
-rowing,[‘Rowing’]
-kicking,"[‘Football’,’Rugby’]"
-pitching,[‘Shooting’]
-aiming,"[‘Archery’,’Shooting’]"
+lifting,[“Weightlifting”]
+wrestling,[“Wrestling”]
+squatting,[“Weightlifting”]
+hitting,[“Tennis”]
+serving,[“Tennis”]
+hugging,[“Taekwondo”]
+fighting,[“Taekwondo”]
+standing,[“Table Tennis”]
+stroking,[“Swimming”]
+sailing,[“Sailing”]
+kicking,"[“Football”,”Rugby”]"
+pitching,[“Shooting”]
+aiming,"[“Archery’,’Shooting”]"
