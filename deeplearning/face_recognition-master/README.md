@@ -33,5 +33,5 @@ docker start -i face_rec_cont
 ## ALTRO
 
 - Il file face_encoding.ipynb contiene il codice che è stato per l'addestramento(da non utilizzare)
-- I file file.csv e dict_file.csv contengono gli embedding che sono stati addestrati dal dataset di 217 attori e una mappa utilizzata per l'etichettatura delle facce.
+- I file embedding.csv e metadata.csv contengono gli embedding che sono stati addestrati dal dataset di 217 attori e una mappa utilizzata per l'etichettatura delle facce.
 - Il file list.csv contiente la lista degli attori contenuti nel dataset
