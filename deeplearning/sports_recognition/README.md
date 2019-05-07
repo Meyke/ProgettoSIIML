@@ -7,7 +7,12 @@ Per fare face recognition e acctivty recognition sono stati utilizzati i seguent
 - [face_recognition](https://github.com/ageitgey/face_recognition)
 - [TRN-pytorch](https://github.com/metalbubble/TRN-pytorch/tree/a8e2df8919050b1fa9e94907f71089cd75816c45)
 
+In presenza di una gpu con specifiche adatte sul proprio calcolatore è possibile far girare il codice direttamente sull'apposita  macchina docker ....
+
+In assenza di una gpu adatta, è possibile comunque testare il del sistema facendo esclusivamente face recognition
+
 ## ALTRO
 
 - I file athletes_embedding.csv e atheletes_metadata.csv contengono rispettivamente i face embedding di atleti presi da un dataset di 242 atleti e i corrispondenti metadati.
 - I file sports1.csv e sports2.csv contengono il mapping tra attività e sport.
+- Il file videos.csv contiene i video utilizzati per il test del tool.
