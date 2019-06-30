@@ -20,13 +20,6 @@ chmod 777 avvioAmbiente.sh
 ./avvioAmbiente.sh
 ```
 
-Per analizzare se tutto funziona correttamente, digitare 
-```
-$ pio-docker status
-...
-[INFO] [Management$] Your system is all ready to go.
-```
-
 Per registrare l'applicazione, digitare:
 
 ```
@@ -34,11 +27,6 @@ chmod 777 registraApp.sh
 ./registraApp.sh
 ```
 
-Per guardare quali sono le applicazioni registrate nel server
-
-```
-pio-docker app list
-```
 ### Import Data
 
 Per importare i dati in batch:

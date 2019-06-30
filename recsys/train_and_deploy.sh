@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH=`pwd`/predictionio/docker/bin:$PATH
 
 cd predictionio/docker/templates/MyRecommendation
 

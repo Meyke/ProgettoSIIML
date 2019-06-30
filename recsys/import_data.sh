@@ -2,6 +2,7 @@
 
 DIRECTORY='predictionio/docker/'
 if [ -d "$DIRECTORY" ]; then
+  export PATH=`pwd`/predictionio/docker/bin:$PATH  
   cd predictionio/docker/templates/MyRecommendation
   # pio-docker import --appid <app_id> --input data/my_users.json
   pio-docker import --appid 1 --input data/my_users.json

@@ -9,7 +9,7 @@ docker build -t sports_rec .
 
 # creazione ed esecuzione del contenitore
 
-docker run -it -p 8888:8888 --name=face_rec_cont sports_rec
+docker run -it -p 8888:8888 --name=sports_rec_cont sports_rec
 
 
 
