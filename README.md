@@ -15,7 +15,7 @@ docker network create SII_network
 
 docker network inspect SII_network
 
-docker network connect SII_network sports_rec
+docker network connect SII_network sports_rec_cont
 
 docker network connect SII_network docker_pio_1
 ```
